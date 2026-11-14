@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify Your Email — TaskFlow</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+
+<body>
+  <div class="auth-centered-wrapper">
+    <div class="auth-standalone-card">
+
+      <!-- Brand Logo Header -->
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <a href="index.html" class="hero-brand" style="justify-content: center; display: inline-flex;"
+          title="TaskFlow Home">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <div class="brand-text" style="text-align: left;">
+            <span class="brand-name" style="color: var(--brand-navy);">TaskFlow</span>
+            <span class="brand-tag">Workspace</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Icon & Headline -->
+      <div class="state-icon-circle state-icon-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </div>
+
+      <h1 class="state-title">Verify your email address</h1>
+      <p class="state-description">
+        We sent a verification link to your registered email address. Please click the link to verify your account:
+      </p>
+
+      <!-- User Email Highlight Box -->
+      <div class="highlight-box" id="user-email-display">
+        Loading email...
+      </div>
+
+      <!-- Global Alert Box -->
+      <div id="global-alert" class="global-alert hidden" role="alert"></div>
+
+      <!-- Action Buttons -->
+      <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+        <button type="button" class="btn-submit" id="check-status-btn">
+          <span>I've Verified My Email</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+
+        <button type="button" class="btn-secondary" id="resend-verification-btn">
+          Resend verification email
+        </button>
+
+        <a href="index.html" class="forgot-link" style="text-align: center; font-size: 0.825rem; margin-top: 0.5rem;">
+          Continue to workspace without verifying &rarr;
+        </a>
+      </div>
+
+      <div class="auth-footer"
+        style="margin-top: 1.75rem; border-top: 1px solid var(--border-light); padding-top: 1rem;">
+        Wrong account? <button type="button" id="logout-btn"
+          style="background: none; border: none; color: var(--primary); font-weight: 600; cursor: pointer; text-decoration: underline;">Sign
+          out</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="verify-email.js"></script>
+</body>
+
+</html>
